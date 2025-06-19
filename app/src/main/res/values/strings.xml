@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nom de l'application -->
+    <string name="app_name">CrowdfundPro</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_projects">Projets</string>
+    <string name="nav_investments">Investissements</string>
+    <string name="nav_dashboard">Tableau de bord</string>
+    <string name="nav_profile">Profil</string>
+    
+    <!-- Authentification -->
+    <string name="auth_login">Connexion</string>
+    <string name="auth_register">Inscription</string>
+    <string name="auth_logout">Déconnexion</string>
+    <string name="auth_username">Nom d\'utilisateur</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_password">Mot de passe</string>
+    <string name="auth_confirm_password">Confirmer le mot de passe</string>
+    <string name="auth_forgot_password">Mot de passe oublié ?</string>
+    <string name="auth_login_success">Connexion réussie</string>
+    <string name="auth_register_success">Inscription réussie</string>
+    <string name="auth_error_invalid_credentials">Identifiants invalides</string>
+    <string name="auth_error_network">Erreur de connexion réseau</string>
+    
+    <!-- Projets -->
+    <string name="projects_title">Projets</string>
+    <string name="projects_search_hint">Rechercher des projets...</string>
+    <string name="projects_filter_all">Tous</string>
+    <string name="projects_filter_active">Actifs</string>
+    <string name="projects_filter_completed">Terminés</string>
+    <string name="projects_create">Créer un projet</string>
+    <string name="projects_details">Détails du projet</string>
+    <string name="projects_invest">Investir</string>
+    <string name="projects_share">Partager</string>
+    <string name="projects_favorite">Ajouter aux favoris</string>
+    <string name="projects_unfavorite">Retirer des favoris</string>
+    <string name="projects_target_amount">Objectif : %1$s €</string>
+    <string name="projects_current_amount">Collecté : %1$s €</string>
+    <string name="projects_progress">%1$d%% atteint</string>
+    <string name="projects_days_left">%1$d jours restants</string>
+    <string name="projects_ended">Terminé</string>
+    
+    <!-- Investissements -->
+    <string name="investments_title">Mes Investissements</string>
+    <string name="investments_history">Historique</string>
+    <string name="investments_total">Total investi</string>
+    <string name="investments_amount">Montant</string>
+    <string name="investments_date">Date</string>
+    <string name="investments_status">Statut</string>
+    <string name="investments_status_pending">En attente</string>
+    <string name="investments_status_completed">Terminé</string>
+    <string name="investments_status_failed">Échec</string>
+    <string name="investments_make_investment">Faire un investissement</string>
+    <string name="investments_confirm">Confirmer l\'investissement</string>
+    <string name="investments_success">Investissement réussi !</string>
+    <string name="investments_error">Erreur lors de l\'investissement</string>
+    
+    <!-- Tableau de bord -->
+    <string name="dashboard_title">Tableau de bord</string>
+    <string name="dashboard_overview">Vue d\'ensemble</string>
+    <string name="dashboard_total_invested">Total investi</string>
+    <string name="dashboard_active_investments">Investissements actifs</string>
+    <string name="dashboard_completed_investments">Investissements terminés</string>
+    <string name="dashboard_favorite_projects">Projets favoris</string>
+    <string name="dashboard_recent_activity">Activité récente</string>
+    <string name="dashboard_statistics">Statistiques</string>
+    
+    <!-- Profil -->
+    <string name="profile_title">Mon Profil</string>
+    <string name="profile_edit">Modifier le profil</string>
+    <string name="profile_save">Sauvegarder</string>
+    <string name="profile_cancel">Annuler</string>
+    <string name="profile_name">Nom</string>
+    <string name="profile_bio">Biographie</string>
+    <string name="profile_location">Localisation</string>
+    <string name="profile_website">Site web</string>
+    <string name="profile_member_since">Membre depuis %1$s</string>
+    <string name="profile_projects_created">Projets créés</string>
+    <string name="profile_investments_made">Investissements réalisés</string>
+    
+    <!-- Catégories -->
+    <string name="categories_technology">Technologie</string>
+    <string name="categories_art">Art</string>
+    <string name="categories_music">Musique</string>
+    <string name="categories_film">Film</string>
+    <string name="categories_games">Jeux</string>
+    <string name="categories_design">Design</string>
+    <string name="categories_food">Alimentation</string>
+    <string name="categories_fashion">Mode</string>
+    <string name="categories_publishing">Édition</string>
+    <string name="categories_other">Autre</string>
+    
+    <!-- Actions générales -->
+    <string name="action_save">Sauvegarder</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="action_edit">Modifier</string>
+    <string name="action_share">Partager</string>
+    <string name="action_search">Rechercher</string>
+    <string name="action_filter">Filtrer</string>
+    <string name="action_refresh">Actualiser</string>
+    <string name="action_retry">Réessayer</string>
+    <string name="action_ok">OK</string>
+    <string name="action_yes">Oui</string>
+    <string name="action_no">Non</string>
+    
+    <!-- Messages d\'erreur -->
+    <string name="error_network">Erreur de connexion réseau</string>
+    <string name="error_server">Erreur du serveur</string>
+    <string name="error_unknown">Erreur inconnue</string>
+    <string name="error_loading">Erreur lors du chargement</string>
+    <string name="error_no_data">Aucune donnée disponible</string>
+    <string name="error_invalid_input">Saisie invalide</string>
+    <string name="error_required_field">Ce champ est obligatoire</string>
+    
+    <!-- Messages de succès -->
+    <string name="success_saved">Sauvegardé avec succès</string>
+    <string name="success_updated">Mis à jour avec succès</string>
+    <string name="success_deleted">Supprimé avec succès</string>
+    <string name="success_shared">Partagé avec succès</string>
+    
+    <!-- États de chargement -->
+    <string name="loading">Chargement...</string>
+    <string name="loading_projects">Chargement des projets...</string>
+    <string name="loading_investments">Chargement des investissements...</string>
+    <string name="loading_profile">Chargement du profil...</string>
+    
+    <!-- Notifications -->
+    <string name="notification_new_investment">Nouvel investissement reçu</string>
+    <string name="notification_project_funded">Projet financé avec succès</string>
+    <string name="notification_project_update">Mise à jour de projet</string>
+    
+    <!-- Paiements -->
+    <string name="payment_processing">Traitement du paiement...</string>
+    <string name="payment_success">Paiement réussi</string>
+    <string name="payment_failed">Échec du paiement</string>
+    <string name="payment_method_card">Carte bancaire</string>
+    <string name="payment_method_paypal">PayPal</string>
+    
+    <!-- Formatage -->
+    <string name="currency_format">%1$s €</string>
+    <string name="percentage_format">%1$d%%</string>
+    <string name="date_format">%1$s</string>
+    
+    <!-- Accessibilité -->
+    <string name="content_description_project_image">Image du projet</string>
+    <string name="content_description_user_avatar">Avatar de l\'utilisateur</string>
+    <string name="content_description_progress_bar">Barre de progression</string>
+    <string name="content_description_menu">Menu</string>
+    <string name="content_description_back">Retour</string>
+    <string name="content_description_search">Rechercher</string>
+    <string name="content_description_filter">Filtrer</string>
+</resources>
+

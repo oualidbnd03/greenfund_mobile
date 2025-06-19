@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Couleurs principales du thème futuriste -->
+    
+    <!-- Couleurs primaires -->
+    <color name="primary_blue">#00D4FF</color>
+    <color name="primary_blue_dark">#0099CC</color>
+    <color name="primary_blue_light">#66E5FF</color>
+    
+    <!-- Couleurs secondaires -->
+    <color name="secondary_purple">#8B5CF6</color>
+    <color name="secondary_purple_dark">#7C3AED</color>
+    <color name="secondary_purple_light">#A78BFA</color>
+    
+    <!-- Couleurs d'accent -->
+    <color name="accent_green">#00FF88</color>
+    <color name="accent_orange">#FF6B35</color>
+    <color name="accent_pink">#FF3D71</color>
+    
+    <!-- Couleurs de fond -->
+    <color name="background_dark">#0A0A0A</color>
+    <color name="background_dark_secondary">#1A1A1A</color>
+    <color name="background_dark_tertiary">#2A2A2A</color>
+    
+    <color name="background_light">#FFFFFF</color>
+    <color name="background_light_secondary">#F8F9FA</color>
+    <color name="background_light_tertiary">#E9ECEF</color>
+    
+    <!-- Couleurs de surface -->
+    <color name="surface_dark">#1E1E1E</color>
+    <color name="surface_dark_elevated">#2D2D2D</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="surface_light_elevated">#F5F5F5</color>
+    
+    <!-- Couleurs de texte -->
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3B3B3</color>
+    <color name="text_tertiary_dark">#808080</color>
+    
+    <color name="text_primary_light">#000000</color>
+    <color name="text_secondary_light">#666666</color>
+    <color name="text_tertiary_light">#999999</color>
+    
+    <!-- Couleurs de bordure et dividers -->
+    <color name="border_dark">#333333</color>
+    <color name="border_light">#E0E0E0</color>
+    <color name="divider_dark">#2A2A2A</color>
+    <color name="divider_light">#F0F0F0</color>
+    
+    <!-- Couleurs d'état -->
+    <color name="success">#00FF88</color>
+    <color name="warning">#FFB800</color>
+    <color name="error">#FF3D71</color>
+    <color name="info">#00D4FF</color>
+    
+    <!-- Couleurs de gradient -->
+    <color name="gradient_start">#8B5CF6</color>
+    <color name="gradient_end">#00D4FF</color>
+    
+    <!-- Couleurs transparentes -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_dark">#80000000</color>
+    <color name="semi_transparent_light">#80FFFFFF</color>
+    
+    <!-- Couleurs spécifiques aux composants -->
+    <color name="card_background_dark">#1E1E1E</color>
+    <color name="card_background_light">#FFFFFF</color>
+    <color name="button_background_primary">#00D4FF</color>
+    <color name="button_background_secondary">#8B5CF6</color>
+    <color name="input_background_dark">#2A2A2A</color>
+    <color name="input_background_light">#F8F9FA</color>
+    
+    <!-- Couleurs pour les graphiques et visualisations -->
+    <color name="chart_color_1">#00D4FF</color>
+    <color name="chart_color_2">#8B5CF6</color>
+    <color name="chart_color_3">#00FF88</color>
+    <color name="chart_color_4">#FF6B35</color>
+    <color name="chart_color_5">#FF3D71</color>
+</resources>
+

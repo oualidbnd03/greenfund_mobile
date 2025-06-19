@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/card_margin"
+    app:cardBackgroundColor="@color/card_background_dark"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Image du projet -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/project_image_height">
+
+            <ImageView
+                android:id="@+id/iv_project_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/content_description_project_image" />
+
+            <!-- Overlay gradient -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient_overlay" />
+
+            <!-- Bouton favori -->
+            <ImageView
+                android:id="@+id/iv_favorite"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:layout_gravity="top|end"
+                android:layout_margin="@dimen/spacing_md"
+                android:src="@drawable/ic_favorite_outline"
+                android:background="@drawable/circle_background_semi_transparent"
+                android:padding="@dimen/spacing_xs"
+                android:tint="@color/accent_pink"
+                android:contentDescription="Ajouter aux favoris" />
+
+            <!-- Statut du projet -->
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:layout_margin="@dimen/spacing_md"
+                android:background="@drawable/badge_background"
+                android:padding="@dimen/spacing_sm"
+                android:text="ACTIF"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/text_size_caption"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+
+        <!-- Contenu du projet -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/card_padding">
+
+            <!-- Titre -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/spacing_sm" />
+
+            <!-- Description -->
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text_secondary_dark"
+                android:textSize="@dimen/text_size_body"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:layout_marginBottom="@dimen/spacing_md" />
+
+            <!-- Informations financières -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/spacing_sm">
+
+                <TextView
+                    android:id="@+id/tv_current_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/accent_green"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_target_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_tertiary_dark"
+                    android:textSize="@dimen/text_size_body" />
+
+            </LinearLayout>
+
+            <!-- Barre de progression -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="@dimen/spacing_md">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/progress_bar_height"
+                    android:layout_weight="1"
+                    android:progressTint="@color/primary_blue"
+                    android:progressBackgroundTint="@color/border_dark"
+                    android:layout_marginEnd="@dimen/spacing_sm" />
+
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <!-- Informations temporelles et actions -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_days_left"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="@dimen/text_size_caption"
+                    android:drawableStart="@drawable/ic_schedule"
+                    android:drawablePadding="@dimen/spacing_xs"
+                    android:drawableTint="@color/text_tertiary_dark"
+                    android:gravity="center_vertical" />
+
+                <TextView
+                    android:id="@+id/btn_invest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Investir"
+                    android:textColor="@color/text_primary_dark"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_gradient_primary"
+                    android:paddingHorizontal="@dimen/spacing_lg"
+                    android:paddingVertical="@dimen/spacing_sm"
+                    android:elevation="@dimen/elevation_small" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+

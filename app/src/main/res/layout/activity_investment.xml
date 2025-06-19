@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header avec bouton retour -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/surface_dark"
+            android:elevation="@dimen/elevation_small"
+            android:paddingHorizontal="@dimen/padding_medium">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/icon_size_medium"
+                android:layout_height="@dimen/icon_size_medium"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/text_primary_dark"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:padding="@dimen/spacing_xs"
+                android:contentDescription="Retour" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Investissement"
+                android:textColor="@color/text_primary_dark"
+                android:textSize="@dimen/text_size_title"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/icon_size_medium" />
+
+        </LinearLayout>
+
+        <!-- Informations du projet -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/surface_dark"
+            app:cardCornerRadius="@dimen/border_radius_large"
+            app:cardElevation="@dimen/elevation_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Projet sélectionné"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="@dimen/text_size_caption"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/spacing_sm" />
+
+                <TextView
+                    android:id="@+id/tv_project_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary_dark"
+                    android:textSize="@dimen/text_size_title"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <TextView
+                    android:id="@+id/tv_project_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="@dimen/text_size_body"
+                    android:layout_marginBottom="@dimen/spacing_sm" />
+
+                <TextView
+                    android:id="@+id/tv_project_current"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/accent_green"
+                    android:textSize="@dimen/text_size_body"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Formulaire d'investissement -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/surface_dark"
+            app:cardCornerRadius="@dimen/border_radius_large"
+            app:cardElevation="@dimen/elevation_medium">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Montant de l'investissement"
+                    android:textColor="@color/text_primary_dark"
+                    android:textSize="@dimen/text_size_subtitle"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/spacing_md" />
+
+                <!-- Champ montant -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    app:boxBackgroundMode="filled"
+                    app:boxBackgroundColor="@color/input_background_dark"
+                    app:boxCornerRadiusTopStart="@dimen/border_radius_medium"
+                    app:boxCornerRadiusTopEnd="@dimen/border_radius_medium"
+                    app:boxCornerRadiusBottomStart="@dimen/border_radius_medium"
+                    app:boxCornerRadiusBottomEnd="@dimen/border_radius_medium"
+                    app:boxStrokeColor="@color/primary_blue"
+                    app:hintTextColor="@color/text_secondary_dark"
+                    app:suffixText="€"
+                    app:suffixTextColor="@color/text_secondary_dark">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_investment_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Montant à investir"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_primary_dark"
+                        android:textColorHint="@color/text_tertiary_dark"
+                        android:textSize="@dimen/text_size_title"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_euro"
+                        android:drawablePadding="@dimen/spacing_sm"
+                        android:drawableTint="@color/primary_blue" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Limites d'investissement -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_lg">
+
+                    <TextView
+                        android:id="@+id/tv_min_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_tertiary_dark"
+                        android:textSize="@dimen/text_size_caption" />
+
+                    <TextView
+                        android:id="@+id/tv_max_amount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_tertiary_dark"
+                        android:textSize="@dimen/text_size_caption"
+                        android:gravity="end" />
+
+                </LinearLayout>
+
+                <!-- Montants suggérés -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Montants suggérés"
+                    android:textColor="@color/text_secondary_dark"
+                    android:textSize="@dimen/text_size_body"
+                    android:layout_marginBottom="@dimen/spacing_sm" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/spacing_lg">
+
+                    <Button
+                        android:id="@+id/btn_amount_25"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:text="25€"
+                        android:textColor="@color/primary_blue"
+                        app:strokeColor="@color/primary_blue" />
+
+                    <Button
+                        android:id="@+id/btn_amount_50"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="@dimen/spacing_sm"
+                        android:text="50€"
+                        android:textColor="@color/primary_blue"
+                        app:strokeColor="@color/primary_blue" />
+
+                    <Button
+                        android:id="@+id/btn_amount_100"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="@dimen/spacing_sm"
+                        android:text="100€"
+                        android:textColor="@color/primary_blue"
+                        app:strokeColor="@color/primary_blue" />
+
+                </LinearLayout>
+
+                <!-- Bouton de confirmation -->
+                <Button
+                    android:id="@+id/btn_confirm_investment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height_large"
+                    android:text="Confirmer l'investissement"
+                    android:textColor="@color/text_primary_dark"
+                    android:textSize="@dimen/text_size_body_large"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_gradient_primary"
+                    android:elevation="@dimen/elevation_small" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Informations de sécurité -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:cardBackgroundColor="@color/surface_dark_elevated"
+            app:cardCornerRadius="@dimen/border_radius_medium"
+            app:cardElevation="@dimen/elevation_small">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_medium"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_size_medium"
+                    android:layout_height="@dimen/icon_size_medium"
+                    android:src="@drawable/ic_security"
+                    android:tint="@color/accent_green"
+                    android:layout_marginEnd="@dimen/spacing_md" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paiement sécurisé"
+                        android:textColor="@color/text_primary_dark"
+                        android:textSize="@dimen/text_size_body"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vos données sont protégées par Stripe"
+                        android:textColor="@color/text_secondary_dark"
+                        android:textSize="@dimen/text_size_caption" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Indicateur de chargement -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/spacing_lg"
+            android:indeterminateTint="@color/primary_blue"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>
+

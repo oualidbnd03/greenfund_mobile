@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dimensions de base -->
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_xxl">48dp</dimen>
+    
+    <!-- Marges et padding -->
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_extra_large">32dp</dimen>
+    
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_large">24dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+    
+    <!-- Tailles de texte -->
+    <dimen name="text_size_caption">12sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_body_large">16sp</dimen>
+    <dimen name="text_size_subtitle">18sp</dimen>
+    <dimen name="text_size_title">20sp</dimen>
+    <dimen name="text_size_headline">24sp</dimen>
+    <dimen name="text_size_display">32sp</dimen>
+    
+    <!-- Hauteurs des composants -->
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="button_height_small">36dp</dimen>
+    <dimen name="button_height_large">56dp</dimen>
+    
+    <dimen name="input_height">48dp</dimen>
+    <dimen name="input_height_large">56dp</dimen>
+    
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="tab_height">48dp</dimen>
+    <dimen name="list_item_height">72dp</dimen>
+    <dimen name="list_item_height_small">56dp</dimen>
+    
+    <!-- Rayons de bordure (border radius) -->
+    <dimen name="border_radius_small">4dp</dimen>
+    <dimen name="border_radius_medium">8dp</dimen>
+    <dimen name="border_radius_large">12dp</dimen>
+    <dimen name="border_radius_extra_large">16dp</dimen>
+    <dimen name="border_radius_round">24dp</dimen>
+    
+    <!-- Épaisseurs de bordure -->
+    <dimen name="border_width_thin">1dp</dimen>
+    <dimen name="border_width_medium">2dp</dimen>
+    <dimen name="border_width_thick">3dp</dimen>
+    
+    <!-- Élévations (shadows) -->
+    <dimen name="elevation_none">0dp</dimen>
+    <dimen name="elevation_small">2dp</dimen>
+    <dimen name="elevation_medium">4dp</dimen>
+    <dimen name="elevation_large">8dp</dimen>
+    <dimen name="elevation_extra_large">16dp</dimen>
+    
+    <!-- Tailles d'icônes -->
+    <dimen name="icon_size_small">16dp</dimen>
+    <dimen name="icon_size_medium">24dp</dimen>
+    <dimen name="icon_size_large">32dp</dimen>
+    <dimen name="icon_size_extra_large">48dp</dimen>
+    
+    <!-- Tailles d'avatar -->
+    <dimen name="avatar_size_small">32dp</dimen>
+    <dimen name="avatar_size_medium">48dp</dimen>
+    <dimen name="avatar_size_large">64dp</dimen>
+    <dimen name="avatar_size_extra_large">96dp</dimen>
+    
+    <!-- Dimensions spécifiques aux cartes -->
+    <dimen name="card_elevation">4dp</dimen>
+    <dimen name="card_corner_radius">12dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    
+    <!-- Dimensions pour les projets -->
+    <dimen name="project_card_height">200dp</dimen>
+    <dimen name="project_image_height">120dp</dimen>
+    <dimen name="progress_bar_height">8dp</dimen>
+    
+    <!-- Dimensions pour les boutons flottants -->
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_size_mini">40dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    
+    <!-- Dimensions pour les bottom sheets -->
+    <dimen name="bottom_sheet_peek_height">64dp</dimen>
+    <dimen name="bottom_sheet_corner_radius">16dp</dimen>
+    
+    <!-- Dimensions pour les dialogues -->
+    <dimen name="dialog_corner_radius">16dp</dimen>
+    <dimen name="dialog_padding">24dp</dimen>
+    
+    <!-- Dimensions pour les graphiques -->
+    <dimen name="chart_height">200dp</dimen>
+    <dimen name="chart_margin">16dp</dimen>
+</resources>
+
