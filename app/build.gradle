@@ -22,6 +22,15 @@ android {
         buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", "\"pk_live_your_stripe_key\""
     }
 
+    signingConfigs {
+        release {
+            storeFile file('crowdfundpro-release.keystore')
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias "crowdfundpro"
+            keyPassword System.getenv("KEY_PASSWORD")
+        }
+    }
+
     buildTypes {
         debug {
             debuggable true
@@ -38,15 +47,6 @@ android {
             
             buildConfigField "String", "API_BASE_URL", "\"https://api.crowdfundpro.com/api/\""
             buildConfigField "String", "STRIPE_PUBLISHABLE_KEY", "\"pk_live_your_stripe_key\""
-        }
-    }
-
-    signingConfigs {
-        release {
-            storeFile file('crowdfundpro-release.keystore')
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias "crowdfundpro"
-            keyPassword System.getenv("KEY_PASSWORD")
         }
     }
 
