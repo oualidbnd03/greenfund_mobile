@@ -1,7 +1,7 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
-    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services' apply false
+    id 'com.google.firebase.crashlytics' apply false
 }
 
 android {
@@ -24,10 +24,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('crowdfundpro-release.keystore')
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias "crowdfundpro"
-            keyPassword System.getenv("KEY_PASSWORD")
+            // Empty config - will be injected by CI
         }
     }
 

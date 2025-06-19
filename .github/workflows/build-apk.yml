@@ -6,15 +6,6 @@ on:
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:
-    inputs:
-      build_type:
-        description: 'Build type (debug/release)'
-        required: true
-        default: 'debug'
-        type: choice
-        options:
-        - debug
-        - release
 
 jobs:
   build:
@@ -45,7 +36,6 @@ jobs:
       
     - name: Build Debug APK
       run: ./gradlew assembleDebug --stacktrace --info
-      if: github.event.inputs.build_type != 'release'
       
     - name: Upload Debug APK
       uses: actions/upload-artifact@v4
@@ -53,26 +43,11 @@ jobs:
         name: app-debug
         path: app/build/outputs/apk/debug/app-debug.apk
         retention-days: 30
-      if: github.event.inputs.build_type != 'release'
-        
-    - name: Build Release APK
-      run: ./gradlew assembleRelease
-      if: github.event.inputs.build_type == 'release' || github.event_name == 'push'
-      
-    - name: Upload Release APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: app-release
-        path: app/build/outputs/apk/release/app-release.apk
-        retention-days: 30
-      if: github.event.inputs.build_type == 'release' || github.event_name == 'push'
       
     - name: Get APK Info
       run: |
-        echo "=== APK Information ==="
+        echo "=== Debug APK Information ==="
         if [ -f "app/build/outputs/apk/debug/app-debug.apk" ]; then
           echo "Debug APK size: $(ls -lh app/build/outputs/apk/debug/app-debug.apk | awk '{print $5}')"
-        fi
-        if [ -f "app/build/outputs/apk/release/app-release.apk" ]; then
-          echo "Release APK size: $(ls -lh app/build/outputs/apk/release/app-release.apk | awk '{print $5}')"
+          echo "APK location: app/build/outputs/apk/debug/app-debug.apk"
         fi 

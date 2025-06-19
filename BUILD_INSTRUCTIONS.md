@@ -6,7 +6,7 @@ This project uses GitHub Actions to automatically build Android APKs without req
 
 ### 1. Build Android APK (`build-apk.yml`)
 - **Triggers**: Push to main/master/develop branches, Pull Requests, Manual dispatch
-- **Outputs**: Debug and Release APKs
+- **Outputs**: Debug and Release APKs (unsigned)
 - **Artifacts**: Available for 30 days
 
 ### 2. Build Signed Release APK (`build-signed-apk.yml`)
@@ -44,14 +44,28 @@ To build signed APKs, you need to add these secrets to your repository:
 1. **Go to your repository Settings**
 2. **Click on "Secrets and variables" → "Actions"**
 3. **Add these repository secrets**:
-   - `KEYSTORE_PASSWORD`: Your keystore password
-   - `KEY_PASSWORD`: Your key password
+   - `KEYSTORE_FILE`: Base64-encoded keystore file
+   - `SIGNING_KEY_ALIAS`: Your keystore alias name
+   - `SIGNING_KEY_PASSWORD`: Your key password
+   - `SIGNING_STORE_PASSWORD`: Your keystore password
 
-### Example Secret Values:
-```
-KEYSTORE_PASSWORD: mySecurePassword123
-KEY_PASSWORD: myKeyPassword456
-```
+### How to Generate Required Values
+
+1. **Generate Keystore File** (if you don't have one):
+   ```bash
+   keytool -genkey -v -keystore release.keystore -alias your_alias -keyalg RSA -keysize 2048 -validity 10000
+   ```
+
+2. **Convert Keystore to Base64**:
+   ```bash
+   base64 -i release.keystore -o keystore-base64.txt
+   ```
+   Use the content of keystore-base64.txt as your `KEYSTORE_FILE` secret.
+
+3. **Set Other Secrets**:
+   - `SIGNING_KEY_ALIAS`: The alias you used when creating the keystore
+   - `SIGNING_KEY_PASSWORD`: The key password you set
+   - `SIGNING_STORE_PASSWORD`: The keystore password you set
 
 ## Finding Your Built APK
 
@@ -59,12 +73,12 @@ KEY_PASSWORD: myKeyPassword456
 1. **Go to Actions tab**
 2. **Click on the completed workflow run**
 3. **Scroll down to "Artifacts"**
-4. **Click on the APK artifact to download**
+4. **Download the APK file**
 
-### APK Locations:
-- **Debug APK**: `app-debug.apk` (for testing)
-- **Release APK**: `app-release.apk` (for distribution)
-- **Signed APK**: `app-release-signed.apk` (for Play Store)
+### APK Types:
+- **app-debug.apk**: Debug build (from `build-apk.yml`)
+- **app-release.apk**: Unsigned release build (from `build-apk.yml`)
+- **app-release-signed.apk**: Signed release build (from `build-signed-apk.yml`)
 
 ## Installing the APK
 
