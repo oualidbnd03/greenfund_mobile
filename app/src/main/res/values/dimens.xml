@@ -32,6 +32,7 @@
     <dimen name="button_height">48dp</dimen>
     <dimen name="button_height_small">36dp</dimen>
     <dimen name="button_height_large">56dp</dimen>
+    <dimen name="button_height_medium">48dp</dimen>
     
     <dimen name="input_height">48dp</dimen>
     <dimen name="input_height_large">56dp</dimen>
