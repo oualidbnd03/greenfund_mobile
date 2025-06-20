@@ -14,6 +14,7 @@
     
     <!-- Couleurs d'accent -->
     <color name="accent_green">#00FF88</color>
+    <color name="accent_green_dark">#00CC6D</color>
     <color name="accent_orange">#FF6B35</color>
     <color name="accent_pink">#FF3D71</color>
     
