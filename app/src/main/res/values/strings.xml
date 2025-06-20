@@ -152,5 +152,8 @@
     <string name="content_description_back">Retour</string>
     <string name="content_description_search">Rechercher</string>
     <string name="content_description_filter">Filtrer</string>
+    
+    <!-- New resource -->
+    <string name="default_notification_channel_id" translatable="false">default_channel</string>
 </resources>
 
