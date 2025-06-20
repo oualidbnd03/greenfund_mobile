@@ -32,40 +32,10 @@ jobs:
             echo "$GOOGLE_SERVICES_JSON" > app/google-services.json
             echo "google-services.json created from secret."
           else
-            echo "GOOGLE_SERVICES_JSON secret not found. Creating dummy file for build purposes."
-            cat <<EOF > app/google-services.json
-            {
-              "project_info": {
-                "project_number": "123456789012",
-                "project_id": "crowdfundpro-android",
-                "storage_bucket": "crowdfundpro-android.appspot.com"
-              },
-              "client": [
-                {
-                  "client_info": {
-                    "mobilesdk_app_id": "1:123456789012:android:0123456789abcdef",
-                    "android_client_info": {
-                      "package_name": "com.crowdfundpro.android"
-                    }
-                  },
-                  "oauth_client": [],
-                  "api_key": [
-                    {
-                      "current_key": "AIzaSyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
-                    }
-                  ],
-                  "services": {
-                    "analytics_service": { "status": 1 },
-                    "appinvite_service": { "status": 2, "other_platform_oauth_client": [] },
-                    "ads_service": { "status": 1 }
-                  }
-                }
-              ],
-              "configuration_version": "1"
-            }
-            EOF
+            echo "GOOGLE_SERVICES_JSON secret not found. Using dummy file."
+            cat .github/dummy-google-services.json > app/google-services.json
           fi
-      
+
       - name: Debug file system
         run: |
           echo "--- Verifying google-services.json content ---"
