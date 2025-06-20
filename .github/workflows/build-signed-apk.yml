@@ -103,4 +103,11 @@ jobs:
         run: |
           rm -f app/release.keystore
           rm -f keystore.asc
-          rm -f app/build/outputs/logs/* 
+          rm -f app/build/outputs/logs/*
+
+      - name: Create google-services.json
+        run: echo '${{ secrets.GOOGLE_SERVICES_JSON }}' > app/google-services.json
+
+      - name: Decrypt Keystore
+        run: |
+          echo "DECRYPTING KEYSTORE" 
