@@ -41,11 +41,16 @@ jobs:
       - name: Create google-services.json
         run: echo "$GOOGLE_SERVICES_JSON" > app/google-services.json
 
-      - name: Decrypt Keystore
+      - name: Decrypt Keystore & Run Debug
         run: |
-          echo "DECRYPTING KEYSTORE"
-          echo "$KEYSTORE_FILE" > keystore.asc
+          echo "Creating keystore.asc from secret..."
+          cat <<EOF > keystore.asc
+          $KEYSTORE_FILE
+          EOF
+          echo "keystore.asc created. Size: $(ls -l keystore.asc | awk '{print $5}')"
+          echo "Decrypting keystore..."
           gpg --quiet --batch --yes --decrypt --passphrase="$GPG_PASSPHRASE" --output app/release.keystore keystore.asc
+          echo "Keystore decrypted. Size: $(ls -l app/release.keystore | awk '{print $5}')"
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
@@ -84,6 +89,14 @@ jobs:
             app/build/outputs/apk/release/app-release.apk
             checksum.txt
           retention-days: 90
+
+      - name: Deep Debug
+        if: always()
+        run: |
+          echo "--- STARTING DEEP DEBUG ---"
+          echo "Listing all files in workspace recursively:"
+          ls -laR
+          echo "--- DEEP DEBUG COMPLETE ---"
 
       - name: Upload build reports
         if: failure()
